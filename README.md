@@ -9,5 +9,3 @@
 - A base config has been provided 
 - Create an API key at <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>
 - Add a hidden environment variable called `GITHUB_API_KEY` with your token
-
-## DO NOT ADD BUILD ARTIFACTS TO VERSION CONTROL
