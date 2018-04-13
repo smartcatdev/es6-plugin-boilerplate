@@ -10,28 +10,16 @@
  *
  */
 
-/**
- * Read and load the plugin manifest into memory
- * 
- * @action plugins_loaded
- * 
- * @since 1.1.0
- * @return void
- */
-add_action('plugins_loaded', function () {
-  $file = dirname( __FILE__ ) . '/build/Manifest.json';
+include_once dirname( __FILE__ ) .'/includes/libraries/build-helper.php';
 
-  if ( !file_exists( $file ) ) {
-    return;
-  }
 
-  $manifest = json_decode( file_get_contents( $file ) );
+add_action('wp_enqueue_scripts', function () {
+  
+  // Get the manifest helper instance
+  $helper = build_helper_instance1( __FILE__ );
 
-  if ( !is_null( $manifest ) ) {
-    wp_cache_set( 'my_plugin_manifest', $manifest );
-  }
-});
+  // Enqueue scripts and styles
+  $helper->enqueue_script( 'bundle', 'bundle.js',  null, '1.0.0' ); 
+  $helper->enqueue_style(  'bundle', 'bundle.css', null, '1.0.0' );
 
-add_action('wp_enqeue_scripts', function () {
-  // Load assets from manifest file
 });
