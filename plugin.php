@@ -19,7 +19,7 @@
  * @return void
  */
 add_action('plugins_loaded', function () {
-  $file = dirname( __FILE__ ) . '/build/manifest.json';
+  $file = dirname( __FILE__ ) . '/build/Manifest.json';
 
   if ( !file_exists( $file ) ) {
     return;

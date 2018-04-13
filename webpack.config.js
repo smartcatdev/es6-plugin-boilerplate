@@ -61,6 +61,7 @@ module.exports = {
   plugins: [
     new Manifest({
       generate: generateManifest,
+      fileName: 'Manifest.json',
       seed: {
         js: {},
         css: {}
