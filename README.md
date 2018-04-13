@@ -1,6 +1,4 @@
 # Getting Started
-
-## Adding Entry Points
 - Edit the `build.entry` property in build.config.js following the format of: `{ filename: path }`
 
 ## Loading assets
