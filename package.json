@@ -1,0 +1,32 @@
+{
+  "name": "es6-plugin-boilerplate",
+  "version": "1.0.0",
+  "scripts": {
+    "develop": "npm run clean && ./node_modules/.bin/webpack -d --watch --config webpack.development.js --env development",
+    "build": "npm run clean && ./node_modules/.bin/webpack -p --progress --config webpack.production.js --env production",
+    "clean": "./node_modules/.bin/shx rm -rf ./build/*",
+    "start": "npm run develop",
+    "zip": "./scripts/zip.js",
+    "release": "npm build && npm run zip"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "archiver": "^2.1.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^7.0.1",
+    "shelljs": "^0.8.1",
+    "shx": "^0.2.2",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-manifest-plugin": "^2.0.0",
+    "webpack-merge": "^4.1.2"
+  }
+}
