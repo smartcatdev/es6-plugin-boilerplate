@@ -14,7 +14,7 @@ if ( !function_exists( 'build_helper_instance1' ) ) :
  * @global $build_helpers
  *
  * @since 1.0.0
- * @return mixed
+ * @return BuildHelper1
  */
 function build_helper_instance1( $plugin_file ) {
   global $build_helpers;
