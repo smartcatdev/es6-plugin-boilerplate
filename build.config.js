@@ -19,11 +19,11 @@ module.exports = {
     archive: [
       "LICENSE",
       "package.json",
-      "src/*",
-      "scss/*",
-      "build/*",
-      "includes/*",
-      "*.php"
+      "src/**",
+      "scss/**",
+      "build/**",
+      "includes/**",
+      "**/*.php"
     ]
   }
 }
