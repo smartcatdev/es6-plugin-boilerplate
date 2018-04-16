@@ -11,12 +11,13 @@ const {
 } = require('./build.config')
 const Manifest = require('webpack-manifest-plugin')
 
-const generateManifest = (seed, files) => files.reduce((manifest, {name, path}) => {
+const generateManifest = (seed, files) => files.reduce((manifest, { name, path }) => {
   if (path.endsWith('.js')) {
-    return {...manifest, js: { [name]: path }}
+    manifest.js[name] = path
   } else if (path.endsWith('.css')) {
-    return {...manifest, css: { [name]: path }}
+    manifest.css[name] = path
   }
+  return manifest
 }, seed)
 
 module.exports = {
