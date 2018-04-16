@@ -7,7 +7,7 @@
     "clean": "./node_modules/.bin/shx rm -rf ./build/*",
     "start": "npm run develop",
     "zip": "./scripts/zip.js",
-    "release": "npm build && npm run zip"
+    "release": "npm run build && npm run zip"
   },
   "dependencies": {
     "lodash": "^4.17.5"
