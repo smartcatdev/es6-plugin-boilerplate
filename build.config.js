@@ -16,7 +16,6 @@ module.exports = {
       path: `${__dirname}/build`,
       filename: 'release.zip'
     },
-    filename: "release.zip",
     archive: [
       "LICENSE",
       "package.json",

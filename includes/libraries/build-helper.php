@@ -53,16 +53,16 @@ function build_helper_instance1( $plugin_file ) {
  * @return array()
  */
 function get_manifest1( $plugin_file ) {
-  $file = dirname( $plugin_file ) . '/build/Manifest.json';
-
-  if ( !file_exists( $file ) ) {
-    return;
-  }
-
   $default = array(
     'js'  => array(),
     'css' => array()
   );
+
+  $file = dirname( $plugin_file ) . '/build/Manifest.json';
+
+  if ( !file_exists( $file ) ) {
+    return $default;
+  }
 
   $manifest = json_decode( file_get_contents( $file ), true );
 
